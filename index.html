@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Sunny & Minseop</title>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+<header>
+	<h4 class="wedding-date">
+		<span class="day-date accent-color">Sunday 12</span>
+		<span class="month">October</span>
+		<span class="year accent-color">2014</span>
+	</h4>
+</header>
+
+<nav>
+	<ul>
+		<li class=""><a href="/">처음으로</a></li>
+		<li class=""><a href="/party.html">웨딩파티</a></li>
+		<li class=""><a href="/location.html">오시는길</a></li>
+	</ul>
+</nav>
+
+<div id="intro">
+	<section id="slideshow"></section>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('#slideshow').backstretch([
+				"/images/slideshow3.jpg"
+				,"/images/slideshow4.jpg"
+				,"/images/slideshow5.jpg"
+				,"/images/slideshow6.jpg"
+				,"/images/slideshow7.jpg"
+				,"/images/slideshow1.jpg"
+				,"/images/slideshow2.jpg"]
+				, {duration: 3000, fade: 750});
+		});
+	</script>
+
+	<div class="couple-wrap">
+	<div class="couple-info">
+		<div class="person-info">
+			<div class="info-header">
+				<img src='/images/avatar-park.png' class='person-avatar' alt='kakoo'>
+				<h2>박선희</h2>
+				<p>Sunhee Park</p>
+			</div>
+			<p class='person-bio'>신부</p>
+		</div>
+		<div class="person-info">
+			<div class="info-header">
+				<img src='/images/avatar-ahn.png' class='person-avatar' alt='himinseop'>
+				<h2>안민섭</h2>
+				<p>Minseop Ahn</p>
+			</div>
+			<p class='person-bio'>신랑</p>
+		</div>
+	</div>
+	</div>
+
+</div>
+
+<div id="wedding">
+	<h3 class='accent-color wedding-date'>
+		2014년 10월 12일
+	</h3>
+	<h2 class="news">우리 결혼합니다!</h2>
+</div>
+
+<aside id="stag_wedding_divider-2" class="widget wedding-divider">
+	<!-- BEGIN .section-divider -->
+	<hr class="section-divider" meth="">
+	<!-- END .section-divider -->
+</aside>
+
+<footer>
+민섭이와 선희의 웨딩파티 @20141012
+</footer>
+</body>
+</html>
+

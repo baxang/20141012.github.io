@@ -1,0 +1,278 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+font-weight:normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+ul, ol { list-style:none;}
+::selection{ background-color:#6bc0bf; }
+::-moz-selection{ background-color:#6bc0bf; color: #fff; }
+::selection {
+  color: #fff;
+  text-shadow: none;
+}
+.accent-color { color:#6bc0bf; }
+
+/* font */
+a,
+.wedding-date 
+, h2.news
+{ font-family:'Nixie One'; }
+
+.couple-info .person-info h2
+{
+	font-family:'Jeju Myeongjo';
+}
+footer,
+#wedding h2.news { 
+	font-family: 'Nanum Brush Script';
+}
+
+hr.section-divider {
+	border: none;
+	max-width: 940px;
+	margin: 20px auto;
+	height: 1px;
+	background: #e0e0dd;
+	position: relative;
+	overflow: visible;
+	z-index: 100;
+}
+hr.section-divider:after {
+	z-index: 10000;
+	content: '\e003';
+	font-family: "geeklove";
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	right: 50%;
+	width: 40px;
+	text-align: center;
+	height: 30px;
+	line-height: 1;
+	margin-left: -20px;
+	font-size: 30px;
+	background:white;
+	color:#6bc0bf;
+}
+
+footer {
+	line-height: 100px;
+	color:#505050;
+	font-size:10pt;
+	text-align:center;
+}
+
+
+
+/**************************/
+/* index */
+/**************************/
+
+header { height:80px; position:relative; }
+header .wedding-date { position:absolute; right:20px; bottom:13px; font-size:30px; letter-spacing:-2px; }
+
+nav { background-color:#6bc0bf; }
+nav ul { height:64px; display:block; margin:0 auto; }
+nav li {float:left; margin-left:30px; padding-left:30px; line-height:64px; 
+	border-left: 1px solid #636363;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+nav li:first-child {border:none;}
+nav li a {color:white; text-decoration:none; }
+
+#intro { position:relative;}
+#intro #slideshow { width:100%; height:650px; }
+
+#intro .couple-wrap { position:relative; width:940px; height:150px;margin: 0 auto;}
+#intro .couple-info { position:absolute; bottom:0px; width:940px;}
+#intro .couple-info .person-info {
+	background:white;
+	width:48%;
+	display: inline-block;
+	vertical-align: top;
+	color: #696969;
+	position: relative;
+	overflow: visible;
+	border:1px solid #6bc0bf;
+}
+#intro .couple-wrap .person-info:first-child {
+	margin-right:2%;
+}
+#intro .couple-wrap .person-info:first-child:before {
+	font-family: 'geeklove';
+	content: "\e009";
+	width: 61px;
+	height: 61px;
+	color: #fff;
+	background-color: #6bc0bf;
+	border-radius: 45px;
+	padding-top: 0px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 1.8;
+	position: absolute;
+	top: 107px;
+	right: -40px;
+	z-index: 10000;
+}
+#intro .couple-info .person-info .info-header {
+	padding: 25px 15px 10px 30px;
+	border-bottom: 1px solid #e0e0dd;
+	position: relative;
+	height:120px;
+}
+#intro .couple-info .person-info .info-header h2 {
+	font-size:55px;
+	color:#6bc0bf;
+}
+#intro .couple-info .person-info .info-header p {
+	margin-top: 40px;
+	margin-left: 10px;
+	color:#A0A0A0;
+	font-size:10pt;
+}
+#intro .couple-info .person-info .info-header .person-avatar {
+	position: absolute; right: 20px; top:20px;
+}
+#intro .couple-info .person-info .person-bio {
+	padding-top: 40px;
+	padding-bottom: 10px;
+	width: 80%;
+	max-width: 340px;
+	height:60px;
+	overflow:hidden;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#wedding {
+	text-align;center;
+}
+#wedding h2.news { 
+	font-size: 66px;
+	padding:15px 0 65px;
+	line-height: 1;
+	text-align: center;
+	color: #464141;
+}
+#wedding h3 {text-align:center; }
+#wedding .wedding-date {
+	font-size:30px;
+	padding: 65px 0 20px;
+}
+
+
+
+/******************/
+/* 오시는길 */
+/******************/
+/* 지도 컨트롤러 */
+.map_wrap {position:relative;overflow:hidden;width:940px;height:500px; margin:20px auto 50px;}
+.map_wrap #map { style="width:100%;height:100%;" }
+.radius_border{border:1px solid #919191;border-radius:5px;}
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;}
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}
+.custom_zoomcontrol span:first-child {border-bottom:1px solid #bfbfbf;}
+
+
+
+/* max */
+@media only screen and (max-width:940px) {
+	#intro #slideshow { width:100%; height:450px; }
+	#intro .couple-wrap { position:relative; width:90%; height:200px;}
+	#intro .couple-info { width:100%;}
+	#intro .couple-info .person-info { width:48%; }
+	#intro .couple-info .person-info .info-header h2 { font-size:45px; }
+
+	.map_wrap {position:relative;overflow:hidden;width:95%;height:500px; margin:20px auto 50px;}
+}
+
+/* ipad */
+@media only screen and (max-width:768px) {
+	header { height:65px; position:relative; text-align:center;}
+	nav ul { height:55px; display:block; margin:0 auto; }
+	nav li {float:left; margin-left:30px; padding-left:30px; line-height:55px; }
+
+	#intro #slideshow { width:100%; height:350px; }
+	#intro .couple-wrap { position:relative; width:90%; height:500px;}
+	#intro .couple-info { width:100%;}
+	#intro .couple-info .person-info { clear:both; width:100%; display:block; margin-top:20px; }
+	#intro .couple-info .person-info:first-child {margin:0px;}
+	#intro .couple-wrap .person-info:first-child:before {
+		left: 50%; right: 50%; top: auto; bottom: -40px; margin-left: -30px;
+	}
+
+	.map_wrap {position:relative;overflow:hidden;width:95%;height:400px; margin:20px auto 50px;}
+}
+
+/* mobile */
+@media screen and (max-width:450px) {
+	header { height:50px; position:relative; text-align:center;}
+	header h4.wedding-date { font-size:25px; letter-spacing:-2px; bottom:center;}
+	nav ul { height:45px; display:block; margin:0 auto; }
+	nav li {float:left; margin-left:20px; padding-left:20px; line-height:45px; }
+
+	#intro #slideshow { width:100%; height:350px; }
+	#intro .couple-wrap { position:relative; width:90%; height:670px;}
+	#intro .couple-info { width:100%;}
+	#intro .couple-info .person-info {
+		clear:both;
+		width:100%;
+		display:block;
+		margin-top:20px;
+		text-align:center;
+	}
+	#intro .couple-info .person-info:first-child {margin:0px;}
+	#intro .couple-wrap .person-info:first-child:before {
+		left: 50%; right: 50%; top: auto; bottom: -40px; margin-left: -30px;
+	}
+
+	#intro .couple-info .person-info .info-header {
+		padding: 30px;
+		border-bottom: 1px solid #e0e0dd;
+		position: relative;
+		text-align:center;
+		height:180px;
+	}
+	#intro .couple-info .person-info .info-header h2 {
+		margin-top: 20px;
+		font-size:30px;
+		color:#6bc0bf;
+	}
+	#intro .couple-info .person-info .info-header p {
+		margin-top: 12px;
+		color:#A0A0A0;
+		font-size:9pt;
+	}
+	#intro .couple-info .person-info .info-header .person-avatar {
+		position:relative; top:0;left:0;
+	}
+	#intro .couple-info .person-info .person-bio {
+		padding-top: 40px;
+		padding-bottom: 10px;
+		width: 80%;
+		max-width: 340px;
+		height:60px;
+		overflow:hidden;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.map_wrap {position:relative;overflow:hidden;width:95%;height:300px; margin:10px auto 30px;}
+}
+
