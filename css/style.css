@@ -178,6 +178,13 @@ nav li a {color:white; text-decoration:none; }
 }
 
 
+.container {
+	position: relative;
+	width: 940px;
+	margin: 20px auto;
+	padding: 0;
+}
+
 
 /******************/
 /* 웨딩파티 */
@@ -253,7 +260,30 @@ nav li a {color:white; text-decoration:none; }
 .custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}
 .custom_zoomcontrol span:first-child {border-bottom:1px solid #bfbfbf;}
 
+#location {
+	font-family: ;
+	font-family:'Jeju Myeongjo';
+}
 
+#location h2 {
+	font-size: 25px;
+	margin: 10px 0 10px 0;
+}
+
+#location h3 {
+	font-size: 18px;
+	margin: 15px 0 5px;
+}
+
+#location p {
+	line-height: 160%;
+}
+
+#location blockquote {
+	line-height: 140%;
+	padding: 4px 8px;
+	border-left: #eeeeee 1px solid;
+}
 
 /* max */
 @media only screen and (max-width:940px) {
@@ -264,7 +294,11 @@ nav li a {color:white; text-decoration:none; }
 	#intro .couple-info .person-info { width:48%; }
 	#intro .couple-info .person-info .info-header h2 { font-size:45px; }
 
-	.map_wrap {position:relative;overflow:hidden;width:95%;height:500px; margin:20px auto 50px;}
+	.container {
+		width: 95%;
+		margin: 20px auto 50px;
+	}
+	/*.map_wrap {position:relative;overflow:hidden;width:95%;height:500px; margin:20px auto 50px;}*/
 }
 
 /* ipad */
@@ -348,9 +382,7 @@ nav li.photos {
 }
 
 #photos {
-    position:relative;
-    width:940px;
-    margin: 20px auto;
+    
 }
 
 #photos li {
