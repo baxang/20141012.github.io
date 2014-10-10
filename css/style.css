@@ -86,7 +86,7 @@ header { height:80px; position:relative; overflow:hidden; }
 header .wedding-date { position:absolute; right:20px; bottom:13px; font-size:30px; letter-spacing:-2px; }
 
 nav { background-color:#6bc0bf; }
-nav ul { height:64px; display:block; margin:0 auto; }
+nav ul { height:64px; display:inline-block; margin:0 auto; }
 nav li {float:left; /*margin-left:30px;*/ padding-left:30px; padding-right: 30px; line-height:64px;
 	border-left: 1px solid #636363;
 	border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -162,7 +162,7 @@ nav li a {color:white; text-decoration:none; }
 }
 
 #wedding {
-	text-align;center;
+	text-align: center;
 }
 #wedding h2.news { 
 	font-size: 66px;
@@ -184,7 +184,6 @@ nav li a {color:white; text-decoration:none; }
 	margin: 20px auto;
 	padding: 0;
 }
-
 
 /******************/
 /* 웨딩파티 */
@@ -246,7 +245,7 @@ nav li a {color:white; text-decoration:none; }
 /******************/
 /* 지도 컨트롤러 */
 .map_wrap {position:relative;overflow:hidden;width:940px;height:500px; margin:20px auto 50px;}
-.map_wrap #map { style="width:100%;height:100%;" }
+.map_wrap #map { width:100%;height:100%; }
 .radius_border{border:1px solid #919191;border-radius:5px;}
 .custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
 .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
@@ -260,8 +259,13 @@ nav li a {color:white; text-decoration:none; }
 .custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}
 .custom_zoomcontrol span:first-child {border-bottom:1px solid #bfbfbf;}
 
+nav li .fa {
+  font-size: 20px;
+  line-height: 20px;
+  display: none;
+}
+
 #location {
-	font-family: ;
 	font-family:'Jeju Myeongjo';
 }
 
@@ -305,7 +309,7 @@ nav li a {color:white; text-decoration:none; }
 @media only screen and (max-width:768px) {
 	header { height:65px; position:relative; text-align:center;}
 	nav ul { height:55px; display:block; margin:0 auto; }
-	nav li {float:left; margin-left:30px; padding-left:30px; line-height:55px; }
+	nav li {float:left; line-height:55px; }
 
 	#intro #slideshow { width:100%; height:350px; }
 	#intro .couple-wrap { position:relative; width:90%; height:500px;}
@@ -319,12 +323,27 @@ nav li a {color:white; text-decoration:none; }
 	.map_wrap {position:relative;overflow:hidden;width:95%;height:400px; margin:20px auto 50px;}
 }
 
+/* 메뉴가 작아져야 하는 시점 */
+@media screen and (max-width:640px) {
+  nav li {
+    line-height: 55px;
+  }
+
+	nav li .fa {
+		display: inline;
+	}
+
+  nav li span {
+    display: none;
+  }
+}
+
 /* mobile */
 @media screen and (max-width:450px) {
 	header { height:50px; position:relative; text-align:center;}
 	header h4.wedding-date { font-size:25px; letter-spacing:-2px; bottom:center;}
 	nav ul { height:45px; display:block; margin:0 auto; }
-	nav li {float:left; margin-left:20px; padding-left:20px; line-height:45px; }
+	nav li {float:left; padding-right: 20px; padding-left:20px; line-height:45px; }
 
 	#intro #slideshow { width:100%; height:350px; }
 	#intro .couple-wrap { position:relative; width:90%; height:670px;}
@@ -375,16 +394,6 @@ nav li a {color:white; text-decoration:none; }
 	.map_wrap {position:relative;overflow:hidden;width:95%;height:300px; margin:10px auto 30px;}
 }
 
-/* Photos */
-
-nav li.photos {
-    float: right;
-}
-
-#photos {
-    
-}
-
-#photos li {
-    display: inline-block;
+#instafeed {
+  margin-top: 20px;
 }

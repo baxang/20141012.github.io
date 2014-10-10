@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width">
@@ -7,10 +8,10 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="/js/spectragram.min.js"></script>
+    <script type="text/javascript" src="/js/instafeed.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/css/font-awesome.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 </head>
@@ -27,26 +28,38 @@
 
 <nav>
     <ul>
-        <li class=""><a href="/">처음으로</a></li>
-        <li class=""><a href="/party.html">웨딩파티</a></li>
-        <li class=""><a href="/location.html">오시는길</a></li>
-        <li class="photos"><a href="/photos.html">#선희민섭결혼 <i class="fa fa-instagram"></i></a></li>
+        <li class=""><a href="/"><i class="fa fa-home"></i> <span>처음으로</span></a></li>
+        <li class=""><a href="/party.html"><i class="fa fa-glass"></i> <span>웨딩파티</span></a></li>
+        <li class=""><a href="/location.html"><i class="fa fa-bus"></i> <span>오시는길</span></a></li>
+        <li class="photos"><a href="/photos.html"><i class="fa fa-instagram"></i> <span>사진</span></a></li>
     </ul>
 </nav>
 
-<ul id="photos" class="container"></ul>
+<div class="container">
+    <h1><i class="fa fa-instagram"></i> 인스타그램 #선희민섭결혼 태그를 써주세요!</h1>
+    <div id="instafeed"></div>
+    <button id="more-photos">MORE</button>
+</div>
 
-<script>
-    jQuery.fn.spectragram.accessData = {
-        accessToken: '125816.9160d67.06ebc2f2a9684e9a811e5d3a4fdf6d43',
-        clientID: '9160d677f995421b8a712cfd4a09abff'
-    };
-
-    $('#photos').spectragram('getRecentTagged',{
-        query: 'bread',
-        max: 100,
-        size: 'small'
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: '선희민섭결혼',
+        clientId: '9160d677f995421b8a712cfd4a09abff',
+        after: function() {
+            if (!this.hasNext()) {
+                $('#more-photos').prop('disabled', true);
+            }
+        }
     });
+    feed.run();
+
+    $(document).ready( function(e) {
+        $('#more-photos').click(function(e) {
+            e.preventDefault();
+            feed.next();
+        });
+    } );
 </script>
 
 <aside id="stag_wedding_divider-2" class="widget wedding-divider">
