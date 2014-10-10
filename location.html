@@ -69,18 +69,27 @@ var options = { //지도를 생성할 때 필요한 기본 옵션
 					level: 4 //지도의 레벨(확대, 축소 정도)
 };
 
+var itsbean = {
+  lng: 127.32211312574368,
+  lat: 37.54166883389125,
+  address: '경기 양평군 양서면 양수로 117',
+  address_jibun: '양평군 양서면 용담리 582-1번지',
+  tel: '070-7785-9892',
+  title: '잇츠빈'
+};
+
 var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 
 // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
-function setMapType(maptype) { 
+function setMapType(maptype) {
     var roadmapControl = document.getElementById('btnRoadmap');
-    var skyviewControl = document.getElementById('btnSkyview'); 
+    var skyviewControl = document.getElementById('btnSkyview');
     if (maptype === 'roadmap') {
-        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
+        map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);
         roadmapControl.className = 'selected_btn';
         skyviewControl.className = 'btn';
     } else {
-        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
+        map.setMapTypeId(daum.maps.MapTypeId.HYBRID);
         skyviewControl.className = 'selected_btn';
         roadmapControl.className = 'btn';
     }
@@ -97,10 +106,27 @@ function zoomOut() {
 }
 
 function viewTraffic() {
-	map.addOverlayMapTypeId(daum.maps.MapTypeId.TRAFFIC);    
+	map.addOverlayMapTypeId(daum.maps.MapTypeId.TRAFFIC);
 }
+
+$(document).ready( function(e) {
+  var itsbeanPosition = new daum.maps.LatLng(itsbean.lat, itsbean.lng);
+  var itsbeanMarker   = new daum.maps.Marker({ position: itsbeanPosition });
+  itsbeanMarker.setMap(map);
+
+  var itsbeanInfoWindowContent = 
+        '<div style="font-family:\'Nixie One\'; padding: 5px; ">' 
+      + '<div>' + itsbean.title + '</div>'
+      + itsbean.address
+      + '<p>' + itsbean.tel + '</p>'
+      + '</div>';
+
+  var itsbeanInfowindow = new daum.maps.InfoWindow({
+    position: new daum.maps.LatLng(itsbean.lat, itsbean.lng),
+    content: itsbeanInfoWindowContent
+  });
+
+  itsbeanInfowindow.open(map, itsbeanMarker);
+} );
 </script>
 </html>
-
-
-
