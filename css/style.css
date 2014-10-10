@@ -78,11 +78,11 @@ header .wedding-date { position:absolute; right:20px; bottom:13px; font-size:30p
 
 nav { background-color:#6bc0bf; }
 nav ul { height:64px; display:block; margin:0 auto; }
-nav li {float:left; margin-left:30px; padding-left:30px; line-height:64px; 
+nav li {float:left; /*margin-left:30px;*/ padding-left:30px; padding-right: 30px; line-height:64px;
 	border-left: 1px solid #636363;
 	border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
-nav li:first-child {border:none;}
+nav li:first-child {border:none; margin-left: 30px; }
 nav li a {color:white; text-decoration:none; }
 
 #intro { position:relative;}
@@ -276,3 +276,18 @@ nav li a {color:white; text-decoration:none; }
 	.map_wrap {position:relative;overflow:hidden;width:95%;height:300px; margin:10px auto 30px;}
 }
 
+/* Photos */
+
+nav li.photos {
+    float: right;
+}
+
+#photos {
+    position:relative;
+    width:940px;
+    margin: 20px auto;
+}
+
+#photos li {
+    display: inline-block;
+}
