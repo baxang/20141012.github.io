@@ -17,7 +17,7 @@ ul, ol { list-style:none;}
 }
 .accent-color { color:#6bc0bf; }
 .accent-border { border:1px solid #6bc0bf; }
-.contents { width:940px; margin:0 auto; display:block; }
+.contents { width:940px; margin:0 auto; display:block; position:relative;}
 	
 
 /* font */
@@ -33,11 +33,15 @@ a,
 , #ceremony .program
 , #party .desc
 , #party .program
+, #around .desc
+, #around .program
+, #location
 {
 	font-family:'Jeju Myeongjo';
 }
-footer,
-#wedding h2.news { 
+footer
+, #around .title
+, #wedding h2.news { 
 	font-family: 'Nanum Brush Script';
 }
 
@@ -177,31 +181,37 @@ nav li a {color:white; text-decoration:none; }
 	padding: 65px 0 20px;
 }
 
-
-.container {
-	position: relative;
-	width: 940px;
-	margin: 20px auto;
-	padding: 0;
+#images {
+	margin-top:50px;
+	text-align:center;
 }
+
+#images img.mainimg {
+width:48%;
+}
+
+
+
 
 /******************/
 /* 웨딩파티 */
 /******************/
+#around h2.title,
 #ceremony h2.title {
 	text-align:center;
 	margin: 40px auto;
 	display:block;
-	font-size:45px;
+	font-size:50px;
 	letter-spacing:5px;
 }
 #party h2.title {
 	text-align:center;
 	margin: 40px auto;
 	display:block;
-	font-size:45px;
+	font-size:50px;
 }
 
+#around h2.title i.icon,
 #ceremony h2.title i.icon,
 #party h2.title i.icon {
 	text-align:center;
@@ -210,6 +220,7 @@ nav li a {color:white; text-decoration:none; }
 	font-size:25px;
 	letter-spacing:5px;
 }
+#around .desc,
 #ceremony .desc,
 #party .desc {
 	text-align:center;
@@ -219,6 +230,7 @@ nav li a {color:white; text-decoration:none; }
 	line-height:30px;
 }
 
+#around ul.program,
 #ceremony ol.program,
 #party ol.program {
 	width:50%;
@@ -226,11 +238,13 @@ nav li a {color:white; text-decoration:none; }
 	margin: 40px auto;
 	text-align:center;
 }
+#around ul.program li,
 #ceremony ol.program li,
 #party ol.program li {
 	margin:30px 0 20px 0;
 	font-size: 17px;
 }
+#around ul.program li span.info,
 #ceremony ol.program li span.host {
 	display:block;
 	margin-top:6px;
@@ -243,8 +257,14 @@ nav li a {color:white; text-decoration:none; }
 /******************/
 /* 오시는길 */
 /******************/
+.container {
+	position: relative;
+	width: 940px;
+	margin: 20px auto;
+	padding: 0;
+}
 /* 지도 컨트롤러 */
-.map_wrap {position:relative;overflow:hidden;width:940px;height:500px; margin:20px auto 50px;}
+.map_wrap {position:relative;overflow:hidden;width:940px;height:500px; margin:50px auto 50px;}
 .map_wrap #map { width:100%;height:100%; }
 .radius_border{border:1px solid #919191;border-radius:5px;}
 .custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
@@ -265,29 +285,59 @@ nav li .fa {
   display: none;
 }
 
-#location {
-	font-family:'Jeju Myeongjo';
-}
-
 #location h2 {
-	font-size: 25px;
-	margin: 10px 0 10px 0;
+	font-size: 50px;
+	margin: 40px 5px 20px 5px;
 }
 
 #location h3 {
 	font-size: 18px;
-	margin: 15px 0 5px;
+	margin: 45px 0 15px;
+}
+#location h3:first-child {
+	margin-top: 15px;
 }
 
 #location p {
-	line-height: 160%;
+	line-height: 20px;
+}
+
+#location p.noti {
+	line-height: 18px;
+	font-size: 13px;
+	color:#AAA;
+}
+#location .highlight {
+	background-color:#6bc0bf;
+color:white;
+	  font-weight:bold;
 }
 
 #location blockquote {
 	line-height: 140%;
-	padding: 4px 8px;
+	padding: 4px 20px;
+			 margin-left:20px;
 	border-left: #eeeeee 1px solid;
+	font-size:10pt;
+	color:#909090;
 }
+
+#location .traffic-guide {
+margin:20px 0 50px;
+padding:25px;
+}
+
+
+
+/******************/
+/* 사진 */
+/******************/
+#instafeed {
+  margin-top: 20px;
+}
+
+
+
 
 /* max */
 @media only screen and (max-width:940px) {
@@ -320,6 +370,8 @@ nav li .fa {
 		left: 50%; right: 50%; top: auto; bottom: -40px; margin-left: -30px;
 	}
 
+	#images img.mainimg { width:90%;}
+
 	.map_wrap {position:relative;overflow:hidden;width:95%;height:400px; margin:20px auto 50px;}
 }
 
@@ -328,7 +380,6 @@ nav li .fa {
   nav li {
     line-height: 55px;
   }
-
 	nav li .fa {
 		display: inline;
 	}
@@ -336,6 +387,7 @@ nav li .fa {
   nav li span {
     display: none;
   }
+	nav li:first-child {margin-left: 0px; }
 }
 
 /* mobile */
@@ -392,8 +444,4 @@ nav li .fa {
 	}
 
 	.map_wrap {position:relative;overflow:hidden;width:95%;height:300px; margin:10px auto 30px;}
-}
-
-#instafeed {
-  margin-top: 20px;
 }
