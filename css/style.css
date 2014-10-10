@@ -265,7 +265,8 @@ width:48%;
 }
 /* 지도 컨트롤러 */
 .map_wrap {position:relative;overflow:hidden;width:940px;height:500px; margin:50px auto 50px;}
-.map_wrap #map { width:100%;height:100%; }
+.map_wrap #map { width:100%;height:100%; display:visible;}
+.map_wrap #staticMap { width:650px;height:350px; display:none;}
 .radius_border{border:1px solid #919191;border-radius:5px;}
 .custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
 .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
@@ -349,10 +350,10 @@ padding:25px;
 	#intro .couple-info .person-info .info-header h2 { font-size:45px; }
 
 	.container {
-		width: 95%;
+		width: 100%;
 		margin: 20px auto 50px;
 	}
-	/*.map_wrap {position:relative;overflow:hidden;width:95%;height:500px; margin:20px auto 50px;}*/
+	.map_wrap {position:relative;overflow:hidden;width:100%;height:500px; margin:20px auto 50px;}
 }
 
 /* ipad */
@@ -377,17 +378,15 @@ padding:25px;
 
 /* 메뉴가 작아져야 하는 시점 */
 @media screen and (max-width:640px) {
-  nav li {
-    line-height: 55px;
-  }
-	nav li .fa {
-		display: inline;
-	}
-
-  nav li span {
-    display: none;
-  }
+	nav li { line-height: 55px; }
+	nav li .fa { display: inline; }
+	nav li span { display: none; }
 	nav li:first-child {margin-left: 0px; }
+
+	.map_wrap #map { display:none;}
+	.map_wrap .custom_typecontrol { display:none;}
+	.map_wrap .custom_zoomcontrol { display:none;}
+	.map_wrap #staticMap { width:600px;height:350px; display:block;}
 }
 
 /* mobile */
