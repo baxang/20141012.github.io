@@ -259,14 +259,17 @@ width:48%;
 	margin:30px 0 20px 0;
 	font-size: 17px;
 }
-#around ul.program li span.info,
 #wedding ul.schedule li span.info,
+#around ul.program li span.info,
 #ceremony ul.schedule li span.info,
 #ceremony ol.program li span.host {
 	display:block;
 	margin-top:6px;
 	font-size:9pt;
 	color:#A0A0A0;
+}
+#wedding ul.schedule li span.info {
+	color: white;
 }
 
 
