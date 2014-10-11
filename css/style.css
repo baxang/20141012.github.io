@@ -16,7 +16,8 @@ ul, ol { list-style:none;}
   text-shadow: none;
 }
 .accent-color { color:#6bc0bf; }
-.accent-border { border:1px solid #6bc0bf; }
+.accent-border { border:1px solid #6bc0bf; background-color: white; }
+.accent-background { background-color: #6bc0bf; color: white; }
 .contents { width:940px; margin:0 auto; display:block; position:relative;}
 	
 
@@ -31,6 +32,8 @@ a,
 , #ceremony .title
 , #ceremony .desc
 , #ceremony .program
+, #ceremony .schedule
+, #wedding .schedule
 , #party .desc
 , #party .program
 , #around .desc
@@ -231,20 +234,34 @@ width:48%;
 }
 
 #around ul.program,
+#wedding ul.schedule,
+#ceremony ul.schedule,
 #ceremony ol.program,
 #party ol.program {
-	width:50%;
+	width:550px;
 	padding:20px;
 	margin: 40px auto;
 	text-align:center;
 }
+#wedding ul.schedule li,
+#ceremony ul.schedule li {
+	margin:30px 0 20px 0;
+	font-size: 20px;
+}
+#wedding ul.schedule a,
+#ceremony ul.schedule a {
+	color:white;
+}
 #around ul.program li,
+#wedding ol.program li,
 #ceremony ol.program li,
 #party ol.program li {
 	margin:30px 0 20px 0;
 	font-size: 17px;
 }
 #around ul.program li span.info,
+#wedding ul.schedule li span.info,
+#ceremony ul.schedule li span.info,
 #ceremony ol.program li span.host {
 	display:block;
 	margin-top:6px;
@@ -387,6 +404,18 @@ padding:25px;
 	.map_wrap .custom_typecontrol { display:none;}
 	.map_wrap .custom_zoomcontrol { display:none;}
 	.map_wrap #staticMap { width:600px;height:350px; display:block;}
+
+#around ul.program,
+#wedding ul.schedule,
+#ceremony ul.schedule,
+#ceremony ol.program,
+#party ol.program {
+	width:70%;
+	padding:20px;
+	margin: 40px auto;
+	text-align:center;
+}
+
 }
 
 /* mobile */
